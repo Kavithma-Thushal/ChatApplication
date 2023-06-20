@@ -22,7 +22,7 @@
             </font>
         </Label>
         <TextArea fx:id="txtServerSendArea" focusTraversable="false" layoutX="17.0" layoutY="44.0" prefHeight="502.0" prefWidth="389.0" />
-        <TextField fx:id="txtServerSendField" focusTraversable="false" layoutX="17.0" layoutY="562.0" prefHeight="26.0" prefWidth="330.0" />
+        <TextField fx:id="txtServerSendField" focusTraversable="false" layoutX="17.0" layoutY="562.0" onAction="#serverSendOnAction" prefHeight="26.0" prefWidth="330.0" />
         <Button focusTraversable="false" layoutX="363.0" layoutY="563.0" mnemonicParsing="false" onAction="#serverSendOnAction" text="Send" />
     </children>
 </AnchorPane>
