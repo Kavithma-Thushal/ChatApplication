@@ -4,22 +4,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.chatApplication.controller.ServerController">
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.ServerController">
     <children>
-        <Label layoutX="270.0" layoutY="9.0" text="Server">
+      <ImageView fitHeight="616.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background2.jpg" />
+         </image>
+      </ImageView>
+        <Label layoutX="182.0" layoutY="14.0" text="Server" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="20.0"/>
+                <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <TextArea fx:id="txtServerSendArea" focusTraversable="false" layoutX="23.0" layoutY="43.0" prefHeight="296.0"
-                  prefWidth="554.0"/>
-        <TextField fx:id="txtServerSendField" focusTraversable="false" layoutX="23.0" layoutY="355.0" prefHeight="26.0"
-                   prefWidth="502.0"/>
-        <Button focusTraversable="false" layoutX="533.0" layoutY="355.0" mnemonicParsing="false"
-                onAction="#serverSendOnAction" text="Send"/>
+        <TextArea fx:id="txtServerSendArea" focusTraversable="false" layoutX="17.0" layoutY="44.0" prefHeight="502.0" prefWidth="389.0" />
+        <TextField fx:id="txtServerSendField" focusTraversable="false" layoutX="17.0" layoutY="562.0" prefHeight="26.0" prefWidth="330.0" />
+        <Button focusTraversable="false" layoutX="363.0" layoutY="563.0" mnemonicParsing="false" onAction="#serverSendOnAction" text="Send" />
     </children>
 </AnchorPane>

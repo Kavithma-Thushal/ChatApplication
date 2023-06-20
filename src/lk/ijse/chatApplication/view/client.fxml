@@ -4,22 +4,25 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="lk.ijse.chatApplication.controller.ClientController">
-    <children>
-        <Label layoutX="272.0" layoutY="14.0" text="Client">
-            <font>
-                <Font name="System Bold" size="20.0"/>
-            </font>
-        </Label>
-        <TextArea fx:id="txtClientSendArea" focusTraversable="false" layoutX="23.0" layoutY="48.0" prefHeight="296.0"
-                  prefWidth="554.0"/>
-        <TextField fx:id="txtClientSendField" focusTraversable="false" layoutX="23.0" layoutY="360.0" prefHeight="26.0"
-                   prefWidth="502.0"/>
-        <Button focusTraversable="false" layoutX="533.0" layoutY="360.0" mnemonicParsing="false"
-                onAction="#clientSendOnAction" text="Send"/>
-    </children>
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.ClientController">
+   <children>
+      <ImageView fitHeight="616.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background2.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="184.0" layoutY="14.0" text="Client" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txtClientSendArea" focusTraversable="false" layoutX="17.0" layoutY="44.0" prefHeight="502.0" prefWidth="389.0" />
+      <TextField fx:id="txtClientSendField" focusTraversable="false" layoutX="17.0" layoutY="562.0" prefHeight="26.0" prefWidth="330.0" />
+      <Button focusTraversable="false" layoutX="363.0" layoutY="563.0" mnemonicParsing="false" onAction="#clientSendOnAction" text="Send" />
+   </children>
 </AnchorPane>

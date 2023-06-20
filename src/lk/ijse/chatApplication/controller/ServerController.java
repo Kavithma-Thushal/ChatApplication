@@ -34,10 +34,10 @@ public class ServerController implements Initializable {
         new Thread(() -> {
             try {
                 serverSocket = new ServerSocket(3001);
-                txtServerSendArea.appendText("Server is started!");
+                System.out.println("Server is started!");
 
                 socket = serverSocket.accept();
-                txtServerSendArea.appendText("\nClient is accepted!");
+                System.out.println("Client is accepted!");
 
                 dataInputStream = new DataInputStream(socket.getInputStream());
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
