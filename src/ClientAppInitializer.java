@@ -21,6 +21,7 @@ public class ClientAppInitializer extends Application {
         Parent parent= FXMLLoader.load(getClass().getResource("lk/ijse/chatApplication/view/client.fxml"));
         Scene scene=new Scene(parent);
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }
