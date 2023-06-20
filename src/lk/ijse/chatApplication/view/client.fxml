@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.chatApplication.controller.ClientController">
+    <children>
+        <Label layoutX="272.0" layoutY="14.0" text="Client">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <TextArea fx:id="txtClientSendArea" focusTraversable="false" layoutX="23.0" layoutY="48.0" prefHeight="296.0"
+                  prefWidth="554.0"/>
+        <TextField fx:id="txtClientSendField" focusTraversable="false" layoutX="23.0" layoutY="360.0" prefHeight="26.0"
+                   prefWidth="502.0"/>
+        <Button focusTraversable="false" layoutX="533.0" layoutY="360.0" mnemonicParsing="false"
+                onAction="#clientSendOnAction" text="Send"/>
+    </children>
+</AnchorPane>
