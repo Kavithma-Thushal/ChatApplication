@@ -1,6 +1,7 @@
 package lk.ijse.chatApplication.controller;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -14,97 +15,124 @@ import javafx.scene.layout.VBox;
  **/
 public class ClientController {
 
-    public Label lbl_name;
-    public ScrollPane msgShowArea;
-    public VBox vBox;
-    public TextField msgSendField;
-    public AnchorPane emojiPane;
+    @FXML
+    private Label lblName;
+    @FXML
+    private ScrollPane msgShowArea;
+    @FXML
+    private VBox vBox;
+    @FXML
+    private TextField msgSendField;
+    @FXML
+    private AnchorPane emojiPane;
 
-    public void btnMsgSendOnAction(MouseEvent event) {
-
-    }
-
-    public void msgSendOnAction(ActionEvent actionEvent) {
-
-    }
-
-    public void camOnAction(MouseEvent event) {
+    @FXML
+    private void btnMsgSendOnAction(MouseEvent event) {
 
     }
 
-    public void emojiPaneOnAction(MouseEvent event) {
+    @FXML
+    private void msgSendOnAction(ActionEvent actionEvent) {
 
     }
 
-    public void emojiOnAction(MouseEvent event) {
+    @FXML
+    private void camOnAction(MouseEvent event) {
 
     }
 
-    public void hideEmojiOnAction(MouseEvent event) {
+    @FXML
+    private void emojiPaneOnAction(MouseEvent event) {
 
     }
 
-    public void logoutOnAction(MouseEvent event) {
+    @FXML
+    private void emojiOnAction(MouseEvent event) {
 
     }
 
-    public void sad(MouseEvent event) {
+    @FXML
+    private void hideEmojiOnAction(MouseEvent event) {
 
     }
 
-    public void lot_sad(MouseEvent event) {
+    @FXML
+    private void logoutOnAction(MouseEvent event) {
 
     }
 
-    public void money(MouseEvent event) {
+    @FXML
+    private void sad(MouseEvent event) {
 
     }
 
-    public void love(MouseEvent event) {
+    @FXML
+    private void lot_sad(MouseEvent event) {
 
     }
 
-    public void green_sad(MouseEvent event) {
+    @FXML
+    private void money(MouseEvent event) {
 
     }
 
-    public void smile_eye_close(MouseEvent event) {
+    @FXML
+    private void love(MouseEvent event) {
 
     }
 
-    public void cry(MouseEvent event) {
+    @FXML
+    private void green_sad(MouseEvent event) {
 
     }
 
-    public void sad_head(MouseEvent event) {
+    @FXML
+    private void smile_eye_close(MouseEvent event) {
 
     }
 
-    public void real_smile(MouseEvent event) {
+    @FXML
+    private void cry(MouseEvent event) {
 
     }
 
-    public void tuin(MouseEvent event) {
+    @FXML
+    private void sad_head(MouseEvent event) {
 
     }
 
-    public void woow(MouseEvent event) {
+    @FXML
+    private void real_smile(MouseEvent event) {
 
     }
 
-    public void smile_normal(MouseEvent event) {
+    @FXML
+    private void tuin(MouseEvent event) {
 
     }
 
-    public void large_smile(MouseEvent event) {
+    @FXML
+    private void woow(MouseEvent event) {
 
     }
 
-    public void small_smile(MouseEvent event) {
+    @FXML
+    private void smile_normal(MouseEvent event) {
 
     }
 
-    public void tong_smile(MouseEvent event) {
+    @FXML
+    private void large_smile(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void small_smile(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void tong_smile(MouseEvent event) {
 
     }
 }

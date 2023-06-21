@@ -19,7 +19,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("lk/ijse/chatApplication/view/login.fxml"))));
-        primaryStage.setTitle("Live Chat");
+        primaryStage.setTitle("Live Chat Login");
         primaryStage.setResizable(false);
         primaryStage.show();
     }
