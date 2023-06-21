@@ -39,8 +39,8 @@ public class ServerController implements Initializable {
                 socket = serverSocket.accept();
                 System.out.println("Client is accepted!");
 
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
                 dataInputStream = new DataInputStream(socket.getInputStream());
+                dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
                 while (!msg.equals("finish")) {
                     msg = dataInputStream.readUTF();
