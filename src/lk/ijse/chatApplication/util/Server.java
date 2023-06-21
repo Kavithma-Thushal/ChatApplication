@@ -1,8 +1,8 @@
-package lk.ijse.chatApplication.model;
+package lk.ijse.chatApplication.util;
 
 /**
  * @author : Kavithma Thushal
- * @since : 6/20/2023
+ * @since : 6/21/2023
  **/
 public class Server {
 

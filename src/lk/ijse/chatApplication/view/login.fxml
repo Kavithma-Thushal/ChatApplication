@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
+    <children>
+        <AnchorPane prefHeight="61.0" prefWidth="600.0" style="-fx-background-color: #1C1D1C;">
+            <children>
+                <Label layoutX="210.0" layoutY="3.0" prefHeight="50.0" prefWidth="180.0" text="Live Chat"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="39.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="216.0" layoutY="99.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@images/login.png"/>
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txtEnterName" layoutX="163.0" layoutY="316.0" onAction="#txtEnterNameOnAction"
+                      prefHeight="25.0" prefWidth="275.0" promptText="Enter Name"/>
+    </children>
+</AnchorPane>

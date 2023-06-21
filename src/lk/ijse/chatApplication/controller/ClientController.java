@@ -1,66 +1,110 @@
 package lk.ijse.chatApplication.controller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-
-import java.io.*;
-import java.net.Socket;
-import java.net.URL;
-import java.util.ResourceBundle;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 /**
  * @author : Kavithma Thushal
  * @since : 6/19/2023
  **/
-public class ClientController implements Initializable {
+public class ClientController {
 
-    @FXML
-    private TextField txtClientSendField;
-    @FXML
-    private TextArea txtClientSendArea;
-    private Socket socket;
-    private DataOutputStream dataOutputStream;
-    private DataInputStream dataInputStream;
-    private String msg = "";
-    private String rly;
+    public Label lbl_name;
+    public ScrollPane msgShowArea;
+    public VBox vBox;
+    public TextField msgSendField;
+    public AnchorPane emojiPane;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        clientSendTextArea();
+    public void btnMsgSendOnAction(MouseEvent event) {
+
     }
 
-    private void clientSendTextArea(){
-        new Thread(() -> {
-            try {
-                socket = new Socket("localhost", 2);
+    public void msgSendOnAction(ActionEvent actionEvent) {
 
-                dataInputStream = new DataInputStream(socket.getInputStream());
-                dataOutputStream = new DataOutputStream(socket.getOutputStream());
-
-                while (!msg.equals("finish")) {
-                    msg = dataInputStream.readUTF();
-                    txtClientSendArea.appendText("\nServer : " + msg);
-                }
-
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }).start();
     }
 
-    @FXML
-    private void clientSendOnAction(ActionEvent actionEvent) {
-        try {
-            rly = txtClientSendField.getText().trim();
-            dataOutputStream.writeUTF(rly);
-            dataOutputStream.flush();
-            txtClientSendField.clear();
+    public void camOnAction(MouseEvent event) {
 
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    }
+
+    public void emojiPaneOnAction(MouseEvent event) {
+
+    }
+
+    public void emojiOnAction(MouseEvent event) {
+
+    }
+
+    public void hideEmojiOnAction(MouseEvent event) {
+
+    }
+
+    public void logoutOnAction(MouseEvent event) {
+
+    }
+
+    public void sad(MouseEvent event) {
+
+    }
+
+    public void lot_sad(MouseEvent event) {
+
+    }
+
+    public void money(MouseEvent event) {
+
+    }
+
+    public void love(MouseEvent event) {
+
+    }
+
+    public void green_sad(MouseEvent event) {
+
+    }
+
+    public void smile_eye_close(MouseEvent event) {
+
+    }
+
+    public void cry(MouseEvent event) {
+
+    }
+
+    public void sad_head(MouseEvent event) {
+
+    }
+
+    public void real_smile(MouseEvent event) {
+
+    }
+
+    public void tuin(MouseEvent event) {
+
+    }
+
+    public void woow(MouseEvent event) {
+
+    }
+
+    public void smile_normal(MouseEvent event) {
+
+    }
+
+    public void large_smile(MouseEvent event) {
+
+    }
+
+    public void small_smile(MouseEvent event) {
+
+    }
+
+    public void tong_smile(MouseEvent event) {
+
     }
 }
