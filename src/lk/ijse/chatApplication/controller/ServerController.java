@@ -31,6 +31,10 @@ public class ServerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        serverSendTextArea();
+    }
+
+    private void serverSendTextArea(){
         new Thread(() -> {
             try {
                 serverSocket = new ServerSocket(2);
