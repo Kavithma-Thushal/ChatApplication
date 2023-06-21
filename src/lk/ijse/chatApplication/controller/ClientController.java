@@ -24,21 +24,21 @@ public class ClientController implements Initializable {
     private Socket socket;
     private DataOutputStream dataOutputStream;
     private DataInputStream dataInputStream;
-    private String msg;
-    private String rly = "";
+    private String msg = "";
+    private String rly;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         new Thread(() -> {
             try {
-                socket = new Socket("localhost", 3001);
+                socket = new Socket("localhost", 2);
 
                 dataInputStream = new DataInputStream(socket.getInputStream());
                 dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
-                while (!rly.equals("finish")) {
-                    rly = dataInputStream.readUTF();
-                    txtClientSendArea.appendText("\nServer : " + rly);
+                while (!msg.equals("finish")) {
+                    msg = dataInputStream.readUTF();
+                    txtClientSendArea.appendText("\nServer : " + msg);
                 }
 
             } catch (IOException e) {
@@ -50,8 +50,8 @@ public class ClientController implements Initializable {
     @FXML
     private void clientSendOnAction(ActionEvent actionEvent) {
         try {
-            msg = txtClientSendField.getText().trim();
-            dataOutputStream.writeUTF(msg);
+            rly = txtClientSendField.getText().trim();
+            dataOutputStream.writeUTF(rly);
             dataOutputStream.flush();
             txtClientSendField.clear();
 
