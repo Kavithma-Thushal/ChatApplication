@@ -13,10 +13,10 @@ public class Server {
     private static ArrayList<Handler> clients = new ArrayList<>();
 
     public static void main(String[] args) {
-        try (ServerSocket serverSocket=new ServerSocket(1)){
+        try (ServerSocket serverSocket = new ServerSocket(1)) {
             Socket socket;
 
-            while (true){
+            while (true) {
                 System.out.println("Waiting for client ...");
                 socket = serverSocket.accept();
                 System.out.println("Client is connected");
