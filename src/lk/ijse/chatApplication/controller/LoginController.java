@@ -21,12 +21,13 @@ public class LoginController {
 
     @FXML
     private void txtEnterNameOnAction(ActionEvent actionEvent) throws IOException {
+        userName = txtEnterName.getText();
+        txtEnterName.clear();
+
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/chatApplication/view/client.fxml"))));
         stage.setResizable(false);
         stage.setTitle("Client");
         stage.show();
-        userName = txtEnterName.getText();
-        txtEnterName.clear();
     }
 }

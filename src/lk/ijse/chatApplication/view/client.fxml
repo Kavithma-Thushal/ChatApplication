@@ -43,7 +43,7 @@
                 <VBox fx:id="vBox" prefHeight="396.0" prefWidth="342.0" />
             </content>
         </ScrollPane>
-        <TextField fx:id="msgSendField" layoutX="65.0" layoutY="549.0" onAction="#msgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="36.0" prefWidth="231.0">
+        <TextField fx:id="txtMsgSendField" layoutX="65.0" layoutY="549.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="36.0" prefWidth="231.0">
             <font>
                 <Font name="Calibri Bold Italic" size="17.0" />
             </font>
@@ -74,7 +74,7 @@
         </ImageView>
         <AnchorPane fx:id="emojiPane" layoutX="9.0" layoutY="305.0" opacity="0.74" prefHeight="229.0" prefWidth="188.0" style="-fx-background-color: gray; -fx-background-radius: 15;">
             <children>
-                <GridPane layoutX="10.0" layoutY="13.0" onMouseClicked="#emojiPaneOnAction" prefHeight="200.0" prefWidth="149.0">
+                <GridPane layoutX="10.0" layoutY="13.0" prefHeight="200.0" prefWidth="149.0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
