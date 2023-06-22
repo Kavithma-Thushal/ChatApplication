@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="jfoenix-9.0.10">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/src/lk/ijse/chatApplication/lib/jfoenix-9.0.10.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
