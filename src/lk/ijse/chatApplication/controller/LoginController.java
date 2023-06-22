@@ -17,7 +17,7 @@ public class LoginController {
 
     @FXML
     private JFXTextField txtEnterName;
-    String userName;
+    static String userName;
 
     @FXML
     private void txtEnterNameOnAction(ActionEvent actionEvent) throws IOException {

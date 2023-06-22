@@ -8,12 +8,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
+
+import java.io.*;
+import java.net.Socket;
 
 /**
  * @author : Kavithma Thushal
  * @since : 6/19/2023
  **/
-public class ClientController {
+public class ClientController extends Thread {
 
     @FXML
     private Label lblName;
@@ -25,6 +29,33 @@ public class ClientController {
     private TextField msgSendField;
     @FXML
     private AnchorPane emojiPane;
+
+    private Socket socket;
+    private BufferedReader reader;
+    private PrintWriter writer;
+    private FileChooser fileChooser;
+    private File filePath;
+
+    public void initialize() {
+        lblName.setText(LoginController.userName);
+
+        try {
+            socket = new Socket("localhost", 1);
+            System.out.println("Socket is connected with the server!");
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            writer = new PrintWriter(socket.getOutputStream(), true);
+            this.start();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        emojiPane.setVisible(false);
+    }
+
+    @Override
+    public void run() {
+
+    }
 
     @FXML
     private void btnMsgSendOnAction(MouseEvent event) {
@@ -48,17 +79,17 @@ public class ClientController {
 
     @FXML
     private void emojiOnAction(MouseEvent event) {
-
+        emojiPane.setVisible(true);
     }
 
     @FXML
     private void hideEmojiOnAction(MouseEvent event) {
-
+        emojiPane.setVisible(false);
     }
 
     @FXML
     private void logoutOnAction(MouseEvent event) {
-
+        System.exit(0);
     }
 
     @FXML

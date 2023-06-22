@@ -27,4 +27,28 @@ public class Handler extends Thread {
             throw new RuntimeException(e);
         }
     }
+
+    public void run() {
+        try {
+            String msg;
+            while ((msg = reader.readLine()) != null) {
+                if (msg.equalsIgnoreCase("exit")) {
+                    break;
+                }
+                for (Handler cl : clients) {
+                    cl.writer.println(msg);
+                }
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            try {
+                reader.close();
+                writer.close();
+                socket.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 }
