@@ -7,26 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
+<AnchorPane prefHeight="492.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
     <children>
-        <AnchorPane prefHeight="61.0" prefWidth="600.0" style="-fx-background-color: #1C1D1C;">
+      <ImageView fitHeight="555.0" fitWidth="395.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpg" />
+         </image>
+      </ImageView>
+        <AnchorPane prefHeight="46.0" prefWidth="392.0" style="-fx-background-color: black;">
             <children>
-                <Label layoutX="210.0" layoutY="3.0" prefHeight="50.0" prefWidth="180.0" text="Live Chat"
-                       textFill="WHITE">
+                <Label layoutX="134.0" layoutY="1.0" prefHeight="15.0" prefWidth="125.0" text="Live Chat" textFill="WHITE">
                     <font>
-                        <Font name="System Bold" size="39.0"/>
+                        <Font size="30.0" />
                     </font>
                 </Label>
             </children>
         </AnchorPane>
-        <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="216.0" layoutY="99.0" pickOnBounds="true"
-                   preserveRatio="true">
+        <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="110.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/login.png"/>
+                <Image url="@images/login.png" />
             </image>
         </ImageView>
-        <JFXTextField fx:id="txtEnterName" layoutX="163.0" layoutY="316.0" onAction="#txtEnterNameOnAction"
-                      prefHeight="25.0" prefWidth="275.0" promptText="Enter Name"/>
+        <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="110.0" layoutY="474.0" onAction="#txtEnterNameOnAction" prefHeight="31.0" prefWidth="169.0" promptText="Enter Name" unFocusColor="WHITE" />
     </children>
 </AnchorPane>

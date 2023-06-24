@@ -317,7 +317,12 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void logoutOnAction(MouseEvent event) {
-        System.exit(0);
+    private void voiceCallOnAction(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void videoCallOnAction(MouseEvent event) {
+
     }
 }
