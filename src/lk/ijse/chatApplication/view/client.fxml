@@ -52,7 +52,7 @@
                 <VBox fx:id="vBox" prefHeight="458.0" prefWidth="342.0" />
             </content>
         </ScrollPane>
-        <TextField fx:id="txtMsgSendField" layoutX="44.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="36.0" prefWidth="267.0">
+        <TextField fx:id="txtMsgSendField" layoutX="44.0" layoutY="581.0" onAction="#msgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="21.0" prefWidth="267.0">
             <font>
                 <Font size="17.0" />
             </font>
@@ -65,7 +65,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="319.0" layoutY="586.0" onMouseClicked="#camOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="319.0" layoutY="586.0" onMouseClicked="#attachmentOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/attachment.png" />
             </image>
@@ -73,7 +73,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="353.0" layoutY="585.0" onMouseClicked="#btnMsgSendOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="353.0" layoutY="585.0" onMouseClicked="#msgSendOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/msg_send.png" />
             </image>

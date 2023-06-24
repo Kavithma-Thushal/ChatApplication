@@ -81,6 +81,7 @@ public class ClientController extends Thread {
 
                 Text text = new Text(st);
                 text.setFill(Color.WHITE);
+                //text.setLineSpacing(50);
                 String firstChars = "";
                 if (st.length() > 3) {
                     firstChars = st.substring(0, 3);
@@ -170,7 +171,7 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void txtMsgSendOnAction(ActionEvent actionEvent) {
+    private void msgSendOnAction(ActionEvent actionEvent) {
         String msg = txtMsgSendField.getText();
         writer.println(lblName.getText() + ": " + msg);
 
@@ -182,24 +183,22 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void btnMsgSendOnAction(MouseEvent event) {
-        String msg = txtMsgSendField.getText();
-        writer.println(lblName.getText() + ": " + msg);
-
-        txtMsgSendField.clear();
-
-        if (msg.equalsIgnoreCase("bye")) {
-            System.exit(0);
-        }
-    }
-
-    @FXML
-    private void camOnAction(MouseEvent event) {
+    private void attachmentOnAction(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
         this.filePath = fileChooser.showOpenDialog(stage);
         writer.println(lblName.getText() + " " + "img" + filePath.getPath());
+    }
+
+    @FXML
+    private void voiceCallOnAction(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void videoCallOnAction(MouseEvent event) {
+
     }
 
     @FXML
@@ -315,15 +314,5 @@ public class ClientController extends Thread {
         String emoji = new String(Character.toChars(128539));
         txtMsgSendField.setText(emoji);
         emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void voiceCallOnAction(MouseEvent event) {
-
-    }
-
-    @FXML
-    private void videoCallOnAction(MouseEvent event) {
-
     }
 }
