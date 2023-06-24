@@ -33,11 +33,17 @@
                <image>
                   <Image url="@images/voicecall.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="294.0" layoutY="17.0" onMouseClicked="#videoCallOnAction" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/videocall.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             </children>
         </AnchorPane>
@@ -48,7 +54,7 @@
         </ScrollPane>
         <TextField fx:id="txtMsgSendField" layoutX="44.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="36.0" prefWidth="267.0">
             <font>
-                <Font name="Calibri Bold Italic" size="17.0" />
+                <Font size="17.0" />
             </font>
         </TextField>
         <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="3.0" layoutY="583.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">

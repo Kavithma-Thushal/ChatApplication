@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="492.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
+<AnchorPane prefHeight="492.0" prefWidth="371.0" stylesheets="@styles/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
     <children>
       <ImageView fitHeight="555.0" fitWidth="395.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,11 +25,16 @@
                 </Label>
             </children>
         </AnchorPane>
-        <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="110.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="169.0" fitWidth="180.0" layoutX="110.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/login.png" />
             </image>
         </ImageView>
-        <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="110.0" layoutY="474.0" onAction="#txtEnterNameOnAction" prefHeight="31.0" prefWidth="169.0" promptText="Enter Name" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="55.0" layoutY="404.0" onAction="#EnterNameOnAction" prefHeight="31.0" prefWidth="283.0" promptText="Enter Name" styleClass="txtEnterName" unFocusColor="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="123.0" layoutY="509.0" onAction="#EnterNameOnAction" prefHeight="20.0" prefWidth="143.0" style="-fx-background-color: #198566;" text="Log in">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
     </children>
 </AnchorPane>

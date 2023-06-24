@@ -20,7 +20,7 @@ public class LoginController {
     static String userName;
 
     @FXML
-    private void txtEnterNameOnAction(ActionEvent actionEvent) throws IOException {
+    private void EnterNameOnAction(ActionEvent actionEvent) throws IOException {
         userName = txtEnterName.getText();
         txtEnterName.clear();
 

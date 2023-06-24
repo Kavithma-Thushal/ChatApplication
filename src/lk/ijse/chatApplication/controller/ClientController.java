@@ -14,6 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
@@ -62,7 +63,6 @@ public class ClientController extends Thread {
     @Override
     public void run() {
         try {
-
             while (true) {
                 String msg = reader.readLine();
                 String[] tokens = msg.split(" ");
@@ -80,6 +80,7 @@ public class ClientController extends Thread {
                 }
 
                 Text text = new Text(st);
+                text.setFill(Color.WHITE);
                 String firstChars = "";
                 if (st.length() > 3) {
                     firstChars = st.substring(0, 3);
@@ -126,12 +127,11 @@ public class ClientController extends Thread {
 
                     if (!cmd.equalsIgnoreCase(lblName.getText() + ":")) {
                         Text txtName = new Text(cmd + " ");
+                        txtName.setFill(Color.WHITE);
                         txtName.getStyleClass().add("txtName");
                         tempFlow.getChildren().add(txtName);
 
-                        tempFlow.setStyle("-fx-color: rgb(239,242,255);" +
-                                "-fx-background-color: rgb(255,40,28);" +
-                                " -fx-background-radius: 10px");
+                        tempFlow.setStyle("-fx-color: rgb(239,242,255);" + "-fx-background-color: rgb(43,82,71);" + " -fx-background-radius: 5px");
                         tempFlow.setPadding(new Insets(3, 10, 3, 10));
                     }
 
@@ -151,12 +151,13 @@ public class ClientController extends Thread {
                     } else {
 
                         Text text2 = new Text(fullMsg + " ");
+                        text2.setFill(Color.WHITE);
                         TextFlow flow2 = new TextFlow(text2);
                         hBox.setAlignment(Pos.BOTTOM_RIGHT);
                         hBox.getChildren().add(flow2);
                         hBox.setPadding(new Insets(2, 5, 2, 10));
 
-                        flow2.setStyle("-fx-color: rgb(239,242,255);" + "-fx-background-color: rgb(191,241,9);" + "-fx-background-radius: 10px");
+                        flow2.setStyle("-fx-color: rgb(239,242,255);" + "-fx-background-color: rgb(25,133,102);" + "-fx-background-radius: 5px");
                         flow2.setPadding(new Insets(3, 10, 3, 10));
                     }
 
