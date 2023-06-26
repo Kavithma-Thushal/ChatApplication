@@ -229,7 +229,9 @@ public class ClientController extends Thread {
     @FXML
     private void sad(MouseEvent event) {
         String emoji = new String(Character.toChars(128546));
-        txtMsgSendField.setText(emoji);
+        //txtMsgSendField.setText(emoji);
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
         emojiPane.setVisible(false);
     }
 
