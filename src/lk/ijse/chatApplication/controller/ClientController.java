@@ -227,6 +227,62 @@ public class ClientController extends Thread {
     }
 
     @FXML
+    private void love(MouseEvent event) {
+        String emoji = new String(Character.toChars(128525));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void small_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128578));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void normal_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128522));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void large_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128513));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void real_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128514));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void eyeclose_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128540));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void tong_smile(MouseEvent event) {
+        String emoji = new String(Character.toChars(128539));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
     private void sad(MouseEvent event) {
         String emoji = new String(Character.toChars(128546));
         txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
@@ -243,32 +299,8 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void money(MouseEvent event) {
-        String emoji = new String(Character.toChars(129297));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void love(MouseEvent event) {
-        String emoji = new String(Character.toChars(128525));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
     private void green_sad(MouseEvent event) {
         String emoji = new String(Character.toChars(128560));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void smile_eye_close(MouseEvent event) {
-        String emoji = new String(Character.toChars(128540));
         txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
         txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
         emojiPane.setVisible(false);
@@ -283,24 +315,8 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void sad_head(MouseEvent event) {
+    private void cry_sad(MouseEvent event) {
         String emoji = new String(Character.toChars(128550));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void real_smile(MouseEvent event) {
-        String emoji = new String(Character.toChars(128514));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void tuin(MouseEvent event) {
-        String emoji = new String(Character.toChars(128519));
         txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
         txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
         emojiPane.setVisible(false);
@@ -315,32 +331,16 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void smile_normal(MouseEvent event) {
-        String emoji = new String(Character.toChars(128513));
+    private void tuin(MouseEvent event) {
+        String emoji = new String(Character.toChars(128519));
         txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
         txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
         emojiPane.setVisible(false);
     }
 
     @FXML
-    private void large_smile(MouseEvent event) {
-        String emoji = new String(Character.toChars(128522));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void small_smile(MouseEvent event) {
-        String emoji = new String(Character.toChars(128578));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
-    }
-
-    @FXML
-    private void tong_smile(MouseEvent event) {
-        String emoji = new String(Character.toChars(128539));
+    private void money(MouseEvent event) {
+        String emoji = new String(Character.toChars(129297));
         txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
         txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
         emojiPane.setVisible(false);

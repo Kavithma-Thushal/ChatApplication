@@ -103,49 +103,9 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#eyeclose_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
                             <image>
-                                <Image url="@images/emoji/sad.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                            <image>
-                                <Image url="@images/emoji/lot_sad.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#money" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                            <image>
-                                <Image url="@images/emoji/money.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
-                            <image>
-                                <Image url="@images/emoji/love.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                            <image>
-                                <Image url="@images/emoji/green_sad.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_eye_close" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                            <image>
-                                <Image url="@images/emoji/smile_eye_close.png" />
+                                <Image url="@images/emoji/eyeclose_smile.png" />
                             </image>
                             <GridPane.margin>
                                 <Insets />
@@ -154,55 +114,7 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                            <image>
-                                <Image url="@images/emoji/cry.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad_head" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                            <image>
-                                <Image url="@images/emoji/sad_head.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
-                            <image>
-                                <Image url="@images/emoji/real_smile.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
-                            <image>
-                                <Image url="@images/emoji/tuin.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                            <image>
-                                <Image url="@images/emoji/woow.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#smile_normal" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
-                            <image>
-                                <Image url="@images/emoji/smile_two.png" />
-                            </image>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#large_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                             <image>
                                 <Image url="@images/emoji/large_smile.png" />
                             </image>
@@ -210,7 +122,15 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#normal_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                            <image>
+                                <Image url="@images/emoji/normal_smile.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#small_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                             <image>
                                 <Image url="@images/emoji/small_smile.png" />
                             </image>
@@ -218,9 +138,89 @@
                                 <Cursor fx:constant="HAND" />
                             </cursor>
                         </ImageView>
-                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tong_smile" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
                             <image>
                                 <Image url="@images/emoji/tong_smile.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#love" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/emoji/love.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#green_sad" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@images/emoji/green_sad.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#money" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@images/emoji/money.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <image>
+                                <Image url="@images/emoji/sad.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#lot_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                            <image>
+                                <Image url="@images/emoji/lot_sad.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@images/emoji/cry.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#cry_sad" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                            <image>
+                                <Image url="@images/emoji/cry_sad.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#woow" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@images/emoji/woow.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#tuin" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                            <image>
+                                <Image url="@images/emoji/tuin.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#real_smile" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <image>
+                                <Image url="@images/emoji/real_smile.png" />
                             </image>
                             <cursor>
                                 <Cursor fx:constant="HAND" />

@@ -36,9 +36,9 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </JFXButton>
-      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="352.0" layoutY="8.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="350.0" layoutY="53.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/ShutDown.png" />
+            <Image url="@images/shutdown.png" />
          </image>
       </ImageView>
     </children>
