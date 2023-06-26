@@ -49,10 +49,10 @@
         </AnchorPane>
         <ScrollPane layoutX="24.0" layoutY="94.0" prefHeight="463.0" prefWidth="345.0">
             <content>
-                <VBox fx:id="vBox" prefHeight="458.0" prefWidth="342.0" />
+                <VBox fx:id="vBox" prefHeight="458.0" prefWidth="342.0" style="-fx-background-color: #D3D3D3;" />
             </content>
         </ScrollPane>
-        <TextField fx:id="txtMsgSendField" layoutX="50.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="38.0" prefWidth="255.0">
+        <TextField fx:id="txtMsgSendField" layoutX="50.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="38.0" prefWidth="255.0" style="-fx-background-color: #D3D3D3;">
             <font>
                 <Font size="17.0" />
             </font>
