@@ -9,32 +9,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="583.0" prefWidth="389.0" stylesheets="@styles/login.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chatApplication.controller.LoginController">
+<AnchorPane prefHeight="583.0" prefWidth="389.0" stylesheets="@styles/login.css"
+            xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.ijse.chatApplication.controller.LoginController">
     <children>
-      <ImageView fitHeight="551.0" fitWidth="400.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@images/background.jpg" />
-         </image>
-      </ImageView>
+        <ImageView fitHeight="551.0" fitWidth="400.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/background.jpg"/>
+            </image>
+        </ImageView>
         <AnchorPane prefHeight="46.0" prefWidth="389.0" style="-fx-background-color: black;">
             <children>
-                <Label layoutX="134.0" layoutY="1.0" prefHeight="15.0" prefWidth="125.0" text="Live Chat" textFill="WHITE">
+                <Label layoutX="134.0" layoutY="1.0" prefHeight="15.0" prefWidth="125.0" text="Live Chat"
+                       textFill="WHITE">
                     <font>
-                        <Font size="30.0" />
+                        <Font size="30.0"/>
                     </font>
                 </Label>
             </children>
         </AnchorPane>
-        <ImageView fitHeight="102.0" fitWidth="105.0" layoutX="146.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="102.0" fitWidth="105.0" layoutX="146.0" layoutY="175.0" pickOnBounds="true"
+                   preserveRatio="true">
             <image>
-                <Image url="@images/whatsAppLogo.png" />
+                <Image url="@images/whatsAppLogo.png"/>
             </image>
         </ImageView>
-        <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="55.0" layoutY="404.0" onAction="#EnterNameOnAction" prefHeight="31.0" prefWidth="283.0" promptText="Enter Name" styleClass="txtEnterName" unFocusColor="WHITE" />
-      <JFXButton buttonType="RAISED" layoutX="123.0" layoutY="509.0" onAction="#EnterNameOnAction" prefHeight="20.0" prefWidth="143.0" style="-fx-background-color: #198566;" text="Log in">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </JFXButton>
+        <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="55.0" layoutY="404.0"
+                      onAction="#EnterNameOnAction" prefHeight="31.0" prefWidth="283.0" promptText="Enter Name"
+                      styleClass="txtEnterName" unFocusColor="WHITE"/>
+        <JFXButton buttonType="RAISED" layoutX="123.0" layoutY="509.0" onAction="#EnterNameOnAction" prefHeight="20.0"
+                   prefWidth="143.0" style="-fx-background-color: #198566;" text="Log in">
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </JFXButton>
     </children>
 </AnchorPane>

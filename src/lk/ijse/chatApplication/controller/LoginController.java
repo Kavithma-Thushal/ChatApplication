@@ -27,7 +27,6 @@ public class LoginController {
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/lk/ijse/chatApplication/view/client.fxml"))));
         stage.setResizable(false);
-        stage.setTitle("Client");
         stage.show();
     }
 }

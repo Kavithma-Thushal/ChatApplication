@@ -11,40 +11,41 @@ import java.util.ArrayList;
  * @author : Kavithma Thushal
  * @since : 6/21/2023
  **/
-public class Handler extends Thread {
-    private ArrayList<Handler> clients;
+public class ClientHandler extends Thread {
+    private ArrayList<ClientHandler> clientHandlerArrayList;
     private Socket socket;
-    private BufferedReader reader;
-    private PrintWriter writer;
+    private BufferedReader bufferedReader;
+    private PrintWriter printWriter;
 
-    public Handler(Socket socket, ArrayList<Handler> clients) {
+    public ClientHandler(Socket socket, ArrayList<ClientHandler> clientHandlerArrayList) {
         try {
             this.socket = socket;
-            this.clients = clients;
-            this.reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            this.writer = new PrintWriter(socket.getOutputStream(), true);
+            this.clientHandlerArrayList = clientHandlerArrayList;
+            this.bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            this.printWriter = new PrintWriter(socket.getOutputStream(), true);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
+    @Override
     public void run() {
         try {
             String msg;
-            while ((msg = reader.readLine()) != null) {
+            while ((msg = bufferedReader.readLine()) != null) {
                 if (msg.equalsIgnoreCase("exit")) {
                     break;
                 }
-                for (Handler cl : clients) {
-                    cl.writer.println(msg);
+                for (ClientHandler handler : clientHandlerArrayList) {
+                    handler.printWriter.println(msg);
                 }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
             try {
-                reader.close();
-                writer.close();
+                bufferedReader.close();
+                printWriter.close();
                 socket.close();
             } catch (IOException e) {
                 throw new RuntimeException(e);

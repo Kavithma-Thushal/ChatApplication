@@ -39,8 +39,8 @@ public class ClientController extends Thread {
     private AnchorPane emojiPane;
 
     private Socket socket;
-    private BufferedReader reader;
-    private PrintWriter writer;
+    private BufferedReader bufferedReader;
+    private PrintWriter printWriter;
     private FileChooser fileChooser;
     private File filePath;
 
@@ -48,10 +48,10 @@ public class ClientController extends Thread {
         lblName.setText(LoginController.userName);
 
         try {
-            socket = new Socket("localhost", 1);
-            System.out.println("Socket is connected with the server!");
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            writer = new PrintWriter(socket.getOutputStream(), true);
+            socket = new Socket("localhost", 8080);
+            System.out.println("Server accepted the client!");
+            bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            printWriter = new PrintWriter(socket.getOutputStream(), true);
             this.start();
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -64,9 +64,10 @@ public class ClientController extends Thread {
     public void run() {
         try {
             while (true) {
-                String msg = reader.readLine();
+                String msg = bufferedReader.readLine();
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
+                //System.out.println(cmd);
 
                 StringBuilder fullMsg = new StringBuilder();
                 for (int i = 1; i < tokens.length; i++) {
@@ -81,14 +82,13 @@ public class ClientController extends Thread {
 
                 Text text = new Text(st);
                 text.setFill(Color.WHITE);
-                //text.setLineSpacing(50);
                 String firstChars = "";
                 if (st.length() > 3) {
                     firstChars = st.substring(0, 3);
                 }
 
+                //Handling Images
                 if (firstChars.equalsIgnoreCase("img")) {
-                    //for the Images
 
                     st = st.substring(3, st.length() - 1);
 
@@ -97,8 +97,12 @@ public class ClientController extends Thread {
 
                     ImageView imageView = new ImageView(image);
 
-                    imageView.setFitHeight(150);
-                    imageView.setFitWidth(200);
+                    double scaleFactor = 0.07;
+                    double newWidth = image.getWidth() * scaleFactor;
+                    double newHeight = image.getHeight() * scaleFactor;
+
+                    imageView.setFitWidth(newWidth);
+                    imageView.setFitHeight(newHeight);
 
                     HBox hBox = new HBox(10);
                     hBox.setAlignment(Pos.BOTTOM_RIGHT);
@@ -108,8 +112,11 @@ public class ClientController extends Thread {
                         vBox.setAlignment(Pos.TOP_LEFT);
                         hBox.setAlignment(Pos.CENTER_LEFT);
 
-                        Text text1 = new Text("  " + cmd + " :");
-                        hBox.getChildren().add(text1);
+                        Label label1 = new Label("  " + cmd + " :-");
+                        label1.setStyle("-fx-text-fill: white; -fx-background-color: rgb(43,82,71); -fx-background-radius: 5px;");
+
+
+                        hBox.getChildren().add(label1);
                         hBox.getChildren().add(imageView);
 
                     } else {
@@ -122,43 +129,42 @@ public class ClientController extends Thread {
 
                     Platform.runLater(() -> vBox.getChildren().addAll(hBox));
 
-                } else {
+                } else {    //Main Else
 
                     TextFlow tempFlow = new TextFlow();
 
                     if (!cmd.equalsIgnoreCase(lblName.getText() + ":")) {
-                        Text txtName = new Text(cmd + " ");
+                        Text txtName = new Text(cmd + "  ");
                         txtName.setFill(Color.WHITE);
                         txtName.getStyleClass().add("txtName");
                         tempFlow.getChildren().add(txtName);
 
-                        tempFlow.setStyle("-fx-color: rgb(239,242,255);" + "-fx-background-color: rgb(43,82,71);" + " -fx-background-radius: 5px");
+                        tempFlow.setStyle("-fx-background-color: rgb(43,82,71);" + " -fx-background-radius: 5px");
                         tempFlow.setPadding(new Insets(3, 10, 3, 10));
                     }
 
                     tempFlow.getChildren().add(text);
-                    tempFlow.setMaxWidth(200); //200
+                    tempFlow.setMaxWidth(200);
 
                     TextFlow flow = new TextFlow(tempFlow);
-
-                    HBox hBox = new HBox(12); //12
+                    HBox hBox = new HBox(12);
 
                     if (!cmd.equalsIgnoreCase(lblName.getText() + ":")) {
-
-                        vBox.setAlignment(Pos.TOP_LEFT);
+                        vBox.setAlignment(Pos.TOP_LEFT);            //Handling Other Users
                         hBox.setAlignment(Pos.CENTER_LEFT);
                         hBox.getChildren().add(flow);
+                        hBox.setPadding(new Insets(2, 5, 2, 5));
 
                     } else {
-
-                        Text text2 = new Text(fullMsg + " ");
+                        Text text2 = new Text(fullMsg + " ");       //Handling Current User
                         text2.setFill(Color.WHITE);
                         TextFlow flow2 = new TextFlow(text2);
+
                         hBox.setAlignment(Pos.BOTTOM_RIGHT);
                         hBox.getChildren().add(flow2);
-                        hBox.setPadding(new Insets(2, 5, 2, 10));
+                        hBox.setPadding(new Insets(2, 5, 2, 5));
 
-                        flow2.setStyle("-fx-color: rgb(239,242,255);" + "-fx-background-color: rgb(25,133,102);" + "-fx-background-radius: 5px");
+                        flow2.setStyle("-fx-background-color: rgb(25,133,102);" + "-fx-background-radius: 5px");
                         flow2.setPadding(new Insets(3, 10, 3, 10));
                     }
 
@@ -171,10 +177,20 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void msgSendOnAction(ActionEvent actionEvent) {
+    private void txtMsgSendOnAction(ActionEvent actionEvent) {
         String msg = txtMsgSendField.getText();
-        writer.println(lblName.getText() + ": " + msg);
+        printWriter.println(lblName.getText() + ": " + msg);
+        txtMsgSendField.clear();
 
+        if (msg.equalsIgnoreCase("bye")) {
+            System.exit(0);
+        }
+    }
+
+    @FXML
+    private void btnMsgSendOnAction(MouseEvent event) {
+        String msg = txtMsgSendField.getText();
+        printWriter.println(lblName.getText() + ": " + msg);
         txtMsgSendField.clear();
 
         if (msg.equalsIgnoreCase("bye")) {
@@ -186,9 +202,8 @@ public class ClientController extends Thread {
     private void attachmentOnAction(MouseEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Image");
         this.filePath = fileChooser.showOpenDialog(stage);
-        writer.println(lblName.getText() + " " + "img" + filePath.getPath());
+        printWriter.println(lblName.getText() + " " + "img" + filePath.getPath());
     }
 
     @FXML

@@ -10,20 +10,20 @@ import java.util.ArrayList;
  * @since : 6/21/2023
  **/
 public class Server {
-    private static ArrayList<Handler> clients = new ArrayList<>();
+    private static ArrayList<ClientHandler> clientHandlerArrayList = new ArrayList<>();
 
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(1)) {
+        try (ServerSocket serverSocket = new ServerSocket(8080)) {
             Socket socket;
 
             while (true) {
-                System.out.println("Waiting for client ...");
+                System.out.print("Server is listening for clients .....   ");
                 socket = serverSocket.accept();
-                System.out.println("Client is connected");
+                System.out.println("Client is connected!");
 
-                Handler handler = new Handler(socket, clients);
-                clients.add(handler);
-                handler.start();
+                ClientHandler clientHandler = new ClientHandler(socket, clientHandlerArrayList);
+                clientHandlerArrayList.add(clientHandler);
+                clientHandler.start();
             }
 
         } catch (IOException e) {
