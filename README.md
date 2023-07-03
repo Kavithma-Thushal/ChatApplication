@@ -6,7 +6,10 @@ Technology :-<br/>
 
 Functions :-<br/>
 ✅Any client can log into the chat room<br/>
-✅Clients can discuss anything in the chat room
+✅Clients can discuss anything in the chat room<br/>
+✅Clients can send chats<br/>
+✅Clients can send emojis<br/>
+✅Clients can send images
 
 ### How to use
 * Clone this repo https://github.com/Thushal2001/ChatApplication.git
@@ -14,7 +17,7 @@ Functions :-<br/>
 * Run the AppInitializer
 * Enter your name & log into the chat room
 * You can send chats, emojis, images
-* Discuss anything & enjoy!
+* Enjoy!
 
 ### Version
 0.0.1
