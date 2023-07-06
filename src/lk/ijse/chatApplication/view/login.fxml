@@ -13,7 +13,7 @@
     <children>
         <ImageView fitHeight="551.0" fitWidth="400.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/background.jpg" />
+                <Image url="@images/icon/background.jpg" />
             </image>
         </ImageView>
         <AnchorPane prefHeight="46.0" prefWidth="389.0" style="-fx-background-color: black;">
@@ -27,7 +27,7 @@
         </AnchorPane>
         <ImageView fitHeight="117.0" fitWidth="125.0" layoutX="138.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/whatsappLogo.png" />
+                <Image url="@images/icon/whatsappLogo.png" />
             </image>
         </ImageView>
         <JFXTextField fx:id="txtEnterName" focusColor="WHITE" layoutX="55.0" layoutY="404.0" onAction="#EnterNameOnAction" prefHeight="31.0" prefWidth="283.0" promptText="Enter Name" styleClass="txtEnterName" unFocusColor="WHITE" />
@@ -38,7 +38,7 @@
         </JFXButton>
       <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="350.0" layoutY="53.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/shutdown.png" />
+            <Image url="@images/icon/shutdown.png" />
          </image>
       </ImageView>
     </children>

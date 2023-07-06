@@ -25,13 +25,13 @@
                 </Label>
                 <ImageView fitHeight="61.0" fitWidth="46.0" layoutX="16.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/user.png" />
+                        <Image url="@images/icon/user.png" />
                     </image>
                 </ImageView>
                 <Label layoutX="78.0" layoutY="41.0" text="online" textFill="WHITE" />
                 <ImageView fitHeight="36.0" fitWidth="33.0" layoutX="341.0" layoutY="18.0" onMouseClicked="#voiceCallOnAction" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/voicecall.png" />
+                        <Image url="@images/icon/voicecall.png" />
                     </image>
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -39,7 +39,7 @@
                 </ImageView>
                 <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="294.0" layoutY="17.0" onMouseClicked="#videoCallOnAction" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@images/videocall.png" />
+                        <Image url="@images/icon/videocall.png" />
                     </image>
                     <cursor>
                         <Cursor fx:constant="HAND" />
@@ -59,7 +59,7 @@
         </TextField>
         <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="9.0" layoutY="583.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/send_Emoji.png" />
+                <Image url="@images/icon/send_Emoji.png" />
             </image>
             <cursor>
                 <Cursor fx:constant="HAND" />
@@ -67,7 +67,7 @@
         </ImageView>
         <ImageView fitHeight="35.0" fitWidth="27.0" layoutX="314.0" layoutY="586.0" onMouseClicked="#attachmentOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/attachment.png" />
+                <Image url="@images/icon/attachment.png" />
             </image>
             <cursor>
                 <Cursor fx:constant="HAND" />
@@ -75,7 +75,7 @@
         </ImageView>
         <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="350.0" layoutY="585.0" onMouseClicked="#btnMsgSendOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/msg_send.png" />
+                <Image url="@images/icon/msg_send.png" />
             </image>
             <cursor>
                 <Cursor fx:constant="HAND" />

@@ -12,8 +12,8 @@ import java.util.ArrayList;
  * @since : 6/21/2023
  **/
 public class ClientHandler extends Thread {
-    private ArrayList<ClientHandler> clientHandlerArrayList;
     private Socket socket;
+    private ArrayList<ClientHandler> clientHandlerArrayList;
     private BufferedReader bufferedReader;
     private PrintWriter printWriter;
 
@@ -33,7 +33,7 @@ public class ClientHandler extends Thread {
         try {
             String msg;
             while ((msg = bufferedReader.readLine()) != null) {
-                if (msg.equalsIgnoreCase("exit")) {
+                if (msg.equalsIgnoreCase("bye")) {
                     break;
                 }
                 for (ClientHandler handler : clientHandlerArrayList) {
