@@ -30,6 +30,7 @@ import java.net.Socket;
  **/
 public class ClientController extends Thread {
 
+    public AnchorPane gifPane;
     @FXML
     private Label lblName;
     @FXML
@@ -59,6 +60,7 @@ public class ClientController extends Thread {
         }
 
         emojiPane.setVisible(false);
+        gifPane.setVisible(false);
     }
 
     @Override
@@ -223,15 +225,14 @@ public class ClientController extends Thread {
     }
 
     @FXML
-    private void hideEmojiOnAction(MouseEvent event) {
-        emojiPane.setVisible(false);
+    private void gifOnAction(MouseEvent event) {
+        gifPane.setVisible(true);
     }
 
-    private void unicodeEmoji(int unicode) {
-        String emoji = new String(Character.toChars(unicode));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+    @FXML
+    private void hideEmojiOnAction(MouseEvent event) {
         emojiPane.setVisible(false);
+        gifPane.setVisible(false);
     }
 
     @FXML
@@ -307,5 +308,93 @@ public class ClientController extends Thread {
     @FXML
     private void money(MouseEvent event) {
         unicodeEmoji(129297);
+    }
+
+    private void unicodeEmoji(int unicode) {
+        String emoji = new String(Character.toChars(unicode));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
+    @FXML
+    private void loveGif(MouseEvent event) {
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\lovely.gif");
+    }
+
+    @FXML
+    private void small_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void normal_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void large_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void real_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void eyeclose_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void tong_smileGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void sadGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void lot_sadGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void green_sadGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void cryGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void cry_sadGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void woowGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void tuinGif(MouseEvent event) {
+
+    }
+
+    @FXML
+    private void moneyGif(MouseEvent event) {
+
+    }
+
+    private void gifEmoji(String path) {
+        this.filePath = new File(path);
+        printWriter.println(lblName.getText() + " " + "img" + filePath.getPath());
+        gifPane.setVisible(false);
     }
 }
