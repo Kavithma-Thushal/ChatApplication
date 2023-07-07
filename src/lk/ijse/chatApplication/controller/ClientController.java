@@ -235,6 +235,13 @@ public class ClientController extends Thread {
         gifPane.setVisible(false);
     }
 
+    private void unicodeEmoji(int unicode) {
+        String emoji = new String(Character.toChars(unicode));
+        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
+        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
+        emojiPane.setVisible(false);
+    }
+
     @FXML
     private void love(MouseEvent event) {
         unicodeEmoji(128525);
@@ -310,11 +317,10 @@ public class ClientController extends Thread {
         unicodeEmoji(129297);
     }
 
-    private void unicodeEmoji(int unicode) {
-        String emoji = new String(Character.toChars(unicode));
-        txtMsgSendField.setText(txtMsgSendField.getText() + emoji);
-        txtMsgSendField.positionCaret(txtMsgSendField.getText().length());
-        emojiPane.setVisible(false);
+    private void gifEmoji(String path) {
+        this.filePath = new File(path);
+        printWriter.println(lblName.getText() + " " + "img" + filePath.getPath());
+        gifPane.setVisible(false);
     }
 
     @FXML
@@ -390,11 +396,5 @@ public class ClientController extends Thread {
     @FXML
     private void moneyGif(MouseEvent event) {
 
-    }
-
-    private void gifEmoji(String path) {
-        this.filePath = new File(path);
-        printWriter.println(lblName.getText() + " " + "img" + filePath.getPath());
-        gifPane.setVisible(false);
     }
 }
