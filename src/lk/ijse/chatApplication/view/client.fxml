@@ -47,7 +47,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <ScrollPane layoutX="24.0" layoutY="94.0" prefHeight="463.0" prefWidth="345.0">
+        <ScrollPane fx:id="scrollPane" layoutX="24.0" layoutY="94.0" prefHeight="463.0" prefWidth="345.0">
             <content>
                 <VBox fx:id="vBox" prefHeight="458.0" prefWidth="342.0" style="-fx-background-color: #D3D3D3;" />
             </content>
@@ -57,7 +57,7 @@
                 <Font size="17.0" />
             </font>
         </TextField>
-        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="57.0" layoutY="583.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="54.0" layoutY="582.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/icon/send_Emoji.png" />
             </image>
@@ -65,9 +65,9 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="24.0" layoutY="583.0" onMouseClicked="#gifOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="22.0" layoutY="582.0" onMouseClicked="#gifOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/icon/lovely.gif" />
+                <Image url="@images/icon/gif.png" />
             </image>
             <cursor>
                 <Cursor fx:constant="HAND" />
