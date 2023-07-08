@@ -325,76 +325,76 @@ public class ClientController extends Thread {
 
     @FXML
     private void loveGif(MouseEvent event) {
-        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\lovely.gif");
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\love.png");
     }
 
     @FXML
     private void small_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\small_smile.png");
     }
 
     @FXML
     private void normal_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\normal_smile.png");
     }
 
     @FXML
     private void large_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\large_smile.png");
     }
 
     @FXML
     private void real_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\real_smile.png");
     }
 
     @FXML
     private void eyeclose_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\eyeclose_smile.png");
     }
 
     @FXML
     private void tong_smileGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\tong_smile.png");
     }
 
     @FXML
     private void sadGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\sad.png");
     }
 
     @FXML
     private void lot_sadGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\lot_sad.png");
     }
 
     @FXML
     private void green_sadGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\green_sad.png");
     }
 
     @FXML
     private void cryGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\cry.png");
     }
 
     @FXML
     private void cry_sadGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\cry_sad.png");
     }
 
     @FXML
     private void woowGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\woow.png");
     }
 
     @FXML
     private void tuinGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\tuin.png");
     }
 
     @FXML
     private void moneyGif(MouseEvent event) {
-
+        gifEmoji("D:\\IJSE\\Workspace\\2nd Sem Repo\\ChatApplication\\src\\lk\\ijse\\chatApplication\\view\\images\\gif\\money.png");
     }
 }

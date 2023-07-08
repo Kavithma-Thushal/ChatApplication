@@ -305,7 +305,7 @@
                         </ImageView>
                         <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#loveGif" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@images/gif/lovely.gif" />
+                                <Image url="@images/emoji/love.png" />
                             </image>
                             <cursor>
                                 <Cursor fx:constant="HAND" />
