@@ -52,12 +52,12 @@
                 <VBox fx:id="vBox" prefHeight="458.0" prefWidth="342.0" style="-fx-background-color: #D3D3D3;" />
             </content>
         </ScrollPane>
-        <TextField fx:id="txtMsgSendField" layoutX="50.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="38.0" prefWidth="255.0" style="-fx-background-color: #D3D3D3;">
+        <TextField fx:id="txtMsgSendField" layoutX="90.0" layoutY="581.0" onAction="#txtMsgSendOnAction" onMouseClicked="#hideEmojiOnAction" prefHeight="1.0" prefWidth="215.0" style="-fx-background-color: #D3D3D3;">
             <font>
                 <Font size="17.0" />
             </font>
         </TextField>
-        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="9.0" layoutY="598.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="57.0" layoutY="583.0" onMouseClicked="#emojiOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@images/icon/send_Emoji.png" />
             </image>
@@ -65,9 +65,9 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="8.0" layoutY="569.0" onMouseClicked="#gifOnAction" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="24.0" layoutY="583.0" onMouseClicked="#gifOnAction" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@images/icon/send_Emoji.png" />
+                <Image url="@images/icon/lovely.gif" />
             </image>
             <cursor>
                 <Cursor fx:constant="HAND" />
