@@ -73,7 +73,6 @@ public class ClientController extends Thread {
                 String msg = bufferedReader.readLine();
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
-                //System.out.println(cmd);
 
                 StringBuilder fullMsg = new StringBuilder();
                 for (int i = 1; i < tokens.length; i++) {
