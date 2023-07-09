@@ -38,7 +38,7 @@
         </JFXButton>
       <ImageView fitHeight="31.0" fitWidth="35.0" layoutX="350.0" layoutY="53.0" onMouseClicked="#logoutOnAction" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@images/icon/shutdown.png" />
+            <Image url="@images/icon/powerOff.png" />
          </image>
       </ImageView>
     </children>
