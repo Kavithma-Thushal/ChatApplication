@@ -8,6 +8,7 @@ Functions :-<br/>
 ✅Any client can log into the chat room<br/>
 ✅Clients can discuss anything in the chat room<br/>
 ✅Clients can send chats<br/>
+✅Clients can chat in sinhala<br/>
 ✅Clients can send emojis<br/>
 ✅Clients can send stickers<br/>
 ✅Clients can send images
