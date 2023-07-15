@@ -7,8 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="lib" level="project" />
     <orderEntry type="library" name="jfoenix-8.0.10" level="project" />
-    <orderEntry type="library" name="emoji-java-5.1.1" level="project" />
   </component>
 </module>

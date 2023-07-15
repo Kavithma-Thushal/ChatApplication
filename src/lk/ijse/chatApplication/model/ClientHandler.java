@@ -36,8 +36,8 @@ public class ClientHandler extends Thread {
                 if (msg.equalsIgnoreCase("bye")) {
                     break;
                 }
-                for (ClientHandler handler : clientHandlerArrayList) {
-                    handler.printWriter.println(msg);
+                for (ClientHandler clientHandler : clientHandlerArrayList) {
+                    clientHandler.printWriter.println(msg);
                 }
             }
         } catch (IOException e) {

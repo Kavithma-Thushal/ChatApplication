@@ -31,17 +31,18 @@ import java.net.Socket;
  **/
 public class ClientController extends Thread {
 
-    public AnchorPane gifPane;
     @FXML
     private Label lblName;
     @FXML
-    private VBox vBox;
-    @FXML
     private ScrollPane scrollPane;
+    @FXML
+    private VBox vBox;
     @FXML
     private TextField txtMsgSendField;
     @FXML
     private AnchorPane emojiPane;
+    @FXML
+    private AnchorPane gifPane;
 
     private Socket socket;
     private BufferedReader bufferedReader;
