@@ -17,7 +17,7 @@ public class Server {
             Socket socket;
 
             while (true) {
-                System.out.print("Server is listening for clients .....   ");
+                System.out.println("Server is listening for clients .....");
                 socket = serverSocket.accept();
                 System.out.println("Client is connected!");
 

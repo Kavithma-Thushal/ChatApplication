@@ -55,7 +55,7 @@ public class ClientController extends Thread {
 
         try {
             socket = new Socket("localhost", 8080);
-            System.out.println("Server accepted the client!");
+            System.out.println("Server accepted " + LoginController.userName + "!");
             bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             printWriter = new PrintWriter(socket.getOutputStream(), true);
             this.start();
