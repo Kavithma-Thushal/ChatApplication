@@ -5,14 +5,11 @@ Technology :-<br/>
 ✅Java 8, JavaFx, Java Socket Programming, CSS<br/>
 
 Functions :-<br/>
-✅Client can log into the chat room<br/>
-✅Clients can discuss anything in the chat room<br/>
-✅Clients can send chats<br/>
-✅Clients can chat in sinhala<br/>
-✅Clients can send emojis<br/>
-✅Clients can send stickers<br/>
-✅Clients can send images<br/>
-✅Clients can send unicodes
+✅User can log into the chat room using his/her name<br/>
+✅User can discuss anything in the chat room<br/>
+✅The chat will update with every message sent simultaneously with all the users<br/>
+✅The messages can contain text, Unicode characters, emojis, and images<br/>
+✅The chat interface can be minimized until it is needed to avoid disturbances to the work of the users
 
 ### How to use
 * Clone this repo https://github.com/Thushal2001/ChatApplication.git
